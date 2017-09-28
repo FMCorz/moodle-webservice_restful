@@ -40,7 +40,7 @@ require_once(__DIR__ . '/response.php');
  * @return function
  */
 function external_api_method($functionname, $middlewares = []) {
-    $argmapper = $middlewares['argsmapper'] ?? function($args) { return $args; };
+    $argmapper = $middlewares['argsmapper'] ?? function($args) { return []; };
     $resultmapper = $middlewares['resultmapper'] ?? function($result) { return $result; };
     $responsemaker = $middlewares['responsemaker'] ?? function($result, $args, $request, $options) {
         return traditional_response_from_result($result, $args, $request, $options);
