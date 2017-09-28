@@ -288,6 +288,10 @@ You can define the function `responsemaker` and return your own reponse.
 
 The function `errorhandler` can be specified to handle different type of responses based on the exceptions captured from the external function execution. Exceptions triggered at other stages of the request will be handled separately.
 
+> Do I need to configure Apache to rewrite URLs?
+
+No, this relies on `slasharguments` like a lot of other things in Moodle.
+
 TODO
 ----
 
